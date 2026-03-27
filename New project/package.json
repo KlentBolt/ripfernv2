@@ -1,0 +1,14 @@
+{
+  "name": "fern-v2-search",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static DuckDuckGo redirect search site that works on GitHub Pages.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

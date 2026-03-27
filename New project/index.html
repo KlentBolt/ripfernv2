@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fern V2 Search</title>
+  <meta name="description" content="Fern V2 Search is a static search page that sends queries to DuckDuckGo and works on GitHub Pages.">
+  <meta name="theme-color" content="#081116">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="header-copy">
+        <p class="eyebrow">Self-Hosted Search</p>
+        <h1>Fern V2</h1>
+        <p class="hero-text">Search the web from a clean static page that opens live DuckDuckGo results with no backend required.</p>
+      </div>
+      <div class="header-chip">GitHub Pages Ready</div>
+    </header>
+
+    <main class="layout">
+      <section class="search-panel">
+        <form id="search-form" class="search-form" autocomplete="off">
+          <label class="sr-only" for="search-input">Search the web</label>
+          <div class="search-row">
+            <input id="search-input" name="q" type="search" placeholder="Search the web..." required>
+            <button type="submit">Search</button>
+          </div>
+        </form>
+
+        <div class="quick-actions" aria-label="Suggested searches">
+          <button type="button" data-query="latest tech news">latest tech news</button>
+          <button type="button" data-query="how to host a website">how to host a website</button>
+          <button type="button" data-query="best indie games">best indie games</button>
+          <button type="button" data-query="weather today">weather today</button>
+        </div>
+
+        <div class="meta-bar">
+          <p id="status-message" class="status-message" role="status">Ready to search.</p>
+          <p id="results-summary" class="results-summary"></p>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-labelledby="results-heading">
+        <div class="results-header">
+          <div>
+            <p class="eyebrow">How It Works</p>
+            <h2 id="results-heading">Search opens on DuckDuckGo</h2>
+          </div>
+        </div>
+
+        <div id="results-list" class="results-list">
+          <div class="empty-state">
+            Enter a search above and Fern V2 will open the real DuckDuckGo results page. This version is fully static, so it works on GitHub Pages without a server.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

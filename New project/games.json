@@ -1,0 +1,35 @@
+[
+  {
+    "name": "2048",
+    "url": "https://play2048.co/"
+  },
+  {
+    "name": "Hextris",
+    "url": "https://hextris.io/"
+  },
+  {
+    "name": "Tetris",
+    "url": "https://tetris.com/play-tetris"
+  },
+  {
+    "name": "Minesweeper",
+    "url": "https://minesweeperonline.com/"
+  },
+  {
+    "name": "Snake",
+    "url": "https://playsnake.org/"
+  },
+  {
+    "name": "Sudoku",
+    "url": "https://sudoku.com/"
+  },
+  {
+    "name": "Basketball Stars",
+    "url": "/stuff/selfhosted/basketball-stars/"
+  },
+  {
+    "name": "GeForce NOW Mall",
+    "url": "https://play.geforcenow.com/mall/",
+    "mode": "external"
+  }
+]

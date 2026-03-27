@@ -1,0 +1,31 @@
+services:
+  app:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      FIREFOX_TARGET: http://firefox:5800
+    volumes:
+      - ./:/app
+    depends_on:
+      - firefox
+
+  firefox:
+    image: jlesage/firefox:latest
+    shm_size: "2gb"
+    environment:
+      TZ: America/New_York
+      DISPLAY_WIDTH: 1440
+      DISPLAY_HEIGHT: 900
+      KEEP_APP_RUNNING: 1
+      ENABLE_CJK_FONT: 1
+    ports:
+      - "5800:5800"
+    volumes:
+      - firefox-profile:/config
+
+volumes:
+  firefox-profile:
